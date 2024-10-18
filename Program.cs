@@ -17,7 +17,7 @@ namespace Diakosztalyzat
             if (int.TryParse(Console.ReadLine(), out pontszam))
             {
                 
-                if (pontszam < 0 && pontszam < 49)
+                if (pontszam > 0 && pontszam < 49)
                 {
                     Console.WriteLine("Elégtelen");
                 }
