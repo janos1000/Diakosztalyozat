@@ -10,7 +10,38 @@ namespace Diakosztalyzat
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Adja meg a pontszámát(0-100): ");
+            int pontszam;
 
+
+            if (int.TryParse(Console.ReadLine(), out pontszam))
+            {
+                
+                if (pontszam < 0 && pontszam < 49)
+                {
+                    Console.WriteLine("Elégtelen");
+                }
+                else if (pontszam > 50 && pontszam < 59)
+                {
+                    Console.WriteLine("Elégséges");
+                }
+                else if (pontszam > 60 && pontszam < 79)
+                {
+                    Console.WriteLine("Közepes");
+                }
+                else if (pontszam > 80 && pontszam < 89)
+                {
+                    Console.WriteLine("Jó");
+                }
+                else if (pontszam > 90 && pontszam < 100)
+                {
+                    Console.WriteLine("Jeles");
+                }
+                else
+                {
+                    Console.WriteLine("Érvénytelen pontszám");
+                }
+            }
         }
     }
 }
